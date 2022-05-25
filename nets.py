@@ -50,8 +50,6 @@ class convext(nn.Module):
 
         super().__init__()
         
-        #breakpoint()
-        
         norm_layer = partial(nn.LayerNorm, eps=1e-6)
         
         convext = models.convnext_base(pretrained=True)

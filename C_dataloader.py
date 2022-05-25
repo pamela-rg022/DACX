@@ -26,7 +26,7 @@ class DAXCDataset(Dataset):
     def __getitem__(self, item):
         anno = self.annos[item]
         img_path = os.path.join(self.imgs[item])
-        img = Image.open("images/"+img_path).convert('RGB')
+        img = Image.open(self.data_path+img_path).convert('RGB')
         if self.transforms is not None:
             img = self.transforms(img)
         return img, anno
